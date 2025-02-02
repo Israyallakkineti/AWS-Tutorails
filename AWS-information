@@ -1,0 +1,51 @@
+WHAI IS AWS  ?
+
+Amazon web services is a cloud computing platform that offers a wide range of services. Including :- Compute, Storage, Database, Analytics, Networking, Mobile, Developer tools, Management tools, lo T, and Security.
+
+1. WHAT IS CLOUD COMPUTING :- The delivery of different Services accessing through the internet which includes tools and applications like data storage, servers, database, networking, and software.
+
+2. WHAT IS STORAGE :- Storage is a collection of cloud storage services that can be used to store, retrieve, and process data. AWS Storage Gateway :- a hybrid cloud storage services that allows you to access AWS cloud storage from no-premises. You can used it for backup, disaster recovery, and more. AMAZON SIMPLE STORAGE SERVICES (AMAZON S3) :- Stores objects redundantly across multiple devices in multiple availability zones. 
+
+(1) AMAZON FSX AND AMAZON ELASTIC FILE SYSTEM (Amazon EFS): Provide shared file access for application with unstatured data.	
+(2) AMAZON ELASTIC BLOCK STORE (Amazon EBS): A block-based cloud storage solution that provides low latency for high-performance workloads.
+(3) CLOUD OBJECT STORAGE :  Provides scalable, cost-effective storage for any type of data in its native format.
+(4) AWS cloud storage services helps: Reduce costs, increase agility, Accelerate innovation, male faster decisions.
+
+3. AWS Databases: A collection of purpose-built database engines that provide a secure, reliable, and high-performance foundation for applications and data-driven solution. more than 15 database engines. its supports all database management tasks. such as server provisioning, patching , configuration, and backups. as a result, you can focus on application development while AWS continuously monitors your database and automates scaling.
+
+4. WHAI IS DATA ANALYTICS:- data analytics converts raw data into actionable insights.it includes a range of tools. technologies, and processes used to find trends and solves problems by using data. Data analytics can shape business processes, improve decision-making, and foster business growth.						   								
+BIG DATA ANALYTICS WORK:- 1. Data collection 2. data storage 3. data processing 4. data cleansing 5. data analysis.
+
+5. WHAT IS CLOUD NETWORKING: A Collection of services and infrastructure that allows users to create a secure, reliable, and fast network of inter-connected resources. AWS networking services are designed to help businesses scale, innovate and secure their digital infrastructures. Some AWS networking services.
+
+(A) AMAZON VIRTUAL PRIVATE CLOUD (AWS VPC): Allows users to define and launch AWS resources in a virtual network that they can control foe connectivity, security and resources placement.
+(G) AWS PRIVATELINK: Allows users to privately connect virtual private clouds, supported AWS services, and on-premises networks.
+(B) AWS APP MESH: Provides application-level networking for all services, with virtual routers for traffic handling.
+(C) AMAZON CLOUDFRONT: A Content delivery Network (CDN) that delivers content with high transfer speeds and low latency.
+(D) ELASTIC LOAD BALACING (ELB): A load balancing service.
+(E) AMAZON API GATEWAY: A managed API-Specific support service.
+(F) ROUTE 53: Connects users requests to infrastructure running in AWS, and can also be used to route users to infrastructure outside of AWS.
+
+6. WHAT IS AWS MOBILE:- The console mobile application allows you to configure and receive push notifications for AWS services, monitor resources through a dedicated dashboard, and view configuration details, metrics, and alarms for select AWS Services.
+
+7. AMAZON DEVELOPER TOOLS:- The services provided by Amazon Wed Services (AWS) that enable developers to efficiently build, test and deploy application on the cloud by offering features like code storage, testing, and deployment, essentially streamlining the software development process with tools like CodeCommit, CodeBuild, CodePipline and Cloud9.
+
+(a) AWS CodeCommit: secure code repository for version control.
+(b) AWS CodeBuild: Automated build service to compile and test code.
+(c) AWS CodePipline: Orchestrates the entire software release workflow, including build, test and deploy stages.
+(d) AWS Cloud9: Cloud-based integrated development environment (IDE) to write, run and debug code directly in the browser.
+BENEFITS: Faster development, Improved collaboration, Enhanced quality, Scalability.
+
+8. WHAT IS MANAGEMENT TOOLS: Allows you to enable, Provision and operate AWS resources to determine the health and predictability of your cloud workloads. AWS Management Console is a web-based application that contains and provides centralized access to all individual AWS service consoles.
+
+9. AWS lo T: A set of managed services that allow for the secure communication, management and connecting of billions of lo T devices to the cloud. it combines AI and lo T to improve business outcomes. > Providing data management and analytics for high volume lo T data. > offering services like access control. data encryption and security for device data. > integrating with others AWS services to create complete solutions.
+
+10. AWS SECURITY: A set of services and protocols that help protect data, accounts and workloads from unauthorized access. Configuration management, access control. 
+(A) AWS SECURITY HUB: A cloud security posture management (CSPM) service that checks for security best practice, aggregates alerts and suggests remediation steps.      
+(B) DATA PROTECTION SERVICES: Includes encryption, key management and sensitive data discovery.
+(C) AMAZON GUARDDUTY & AMAZON MACLE: Services that identity potential security issues, such as unauthorized access or suspicious behavior.
+(D) AWS CLOUDTRAIL: A secure standardized logging services that scans for threats and suspicious activity.
+
+10. APP INTERGATION: Application integration on AWS is a suite of services that enable communication between decoupled components within microservices, distributed systems, and serverless applications. you don't need to refactor your entire architecture to benefit decoupling applications at any scale can reduce the impact of changes, making it easier to update and faster to release new feature. (API management, Event bus and Messaging.)
+
+finally, AWS environments are continuously audited, with certifications from accreditation bodies across geographies and verticals.
