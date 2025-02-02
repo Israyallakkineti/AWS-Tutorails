@@ -1,0 +1,92 @@
+Aws devops is a set of developer tools which allows the users to create a CI/CD pipeline from the source to the deploy stage.
+ 
+1. Why aws devops and benefits of using devops : on aws first think is fully managed service guys it is all taken care by aws they tack care of our infrastructure.
+2. build for scale : devops you will be using it on existing services like ec2 or lamda we all using them they already have a scalling feature with in them so obviously it is build for scale you can easily scale up and down 
+3. programmable : you can write scripts, you can create program which you can implement inside aws developer tool 
+4. Automation : devops mainly automation so automation one of the main reasons and automation is available in everything like azure and gcp.devops main motive is automation and then secure aws is provide security is their first priority.
+5. pay-as-you-go : whatever you use only pay for that nothing else.
+
+
+							AWS DEVELOPER TOOLS :
+						____________________________________
+
+
+1. Aws CodePipeline : A contiguous integration and continuous delivery services that automatically builds, tests, and deploys code when there's a change.
+2. AWS CodeCommit : A secure repository for storing source code and binary files that integrates with git tool.
+3. AWS CodeDeploy : A deployment tool that automates code deployments to instances like ec2 instances and on premise servers.
+4. AWS X-Ray : A services that helps developers analyze and debug distributed applications.
+5. AWS CodeBuild : A managed continuous integration (CI) service that compiles source code, runs tests, and produces software packages.
+6. AWS infrastructure composer : A tool that helps visually compose and configure serverless applications.
+
+
+
+					CREATE A CI/CD PIPELINE USING CODEPIPELINE AND CODEDEPLOY :
+				_____________________________________________________________________________
+CREATE FIRST IAM USER THEN WILL BE DO THAT....!
+GOTO -AWS MANAGEMENT CONSOLE -SEARCH CODEDEPLOY -SOURCE -REPOSITORY -CREATE REPOSITORY -REPOSITORY NAME -CREATE.THEN CODEDEPLOY -APPLICATIONS -APPLICATION NAME IS THERE AND EC2/ON -CREATE DEVELOPER TOOLS -CODE DEPLOY -APPLI -WEB -CREATE DPLOYMENT GRUOP -NAME -ENTER SERVICE ROLE -KEY NAME -WebServer -CREATE.
+LANCH INSTANCE -GOTO EC2 -NAME -UBUNTU SERVER -T2 MICRO -IAM ROLE -CREATE NEW ROLE -CREATE ROLE -EC2 -AMAZONEEC2ROLEFORAWSCODEDEPLOY -NEXT -NEXT -ROLE NAME CREATE ROLE -USER DATA -
+
+#!/bin/bash
+sudo apt-get update									
+sudo apt-get -y install ruby
+sudo apt-get install wget
+cd /home/ubuntu
+wget https://aws-codedeploy-us-east-2.s3.us-east-2.amazonaws.com/latest/install
+sudo /install auto
+sudo chmod +x ./install
+sudo service codedeploy-agent start   NEXT -NEXT-KEY NAME -WebServer -ADD RULE -HTTP -REVIEW -KEY PAIR CHOOSE -LUNCH INSTANCES.
+
+
+							WHY CLOUD ENGINEER:-- 
+						_______________________________________
+
+cloud engineering is a field that uses cloud computing to provide businesses with services like storage, networking, infrastructure and security. cloud engineering can be beneficial for businesses because it can. increase flexibility, improve security, reduce costs, improve accessibility and automate software updates.
+
+ 						WHAT IS CLOUD ENGINEERING ROLE: 
+					______________________________________________
+
+A cloud engineer takes care of all the technical duties which are related with cloud computing. involves planning, architecting managing, monitoring and also supports cloud-based applications.
+
+(HOW BECOME A CLOUD ENGINEERING , FUTURE OF CLOUD ENGINEERING AND VARIOUS CLOUD ENGINEER ROLES IS 19 ROLES IS AVAILABLE MAY I USES DEVOPS IN CLOUD ARCHITECTURE.) 
+______________________________________________________________________________________________________________________________________________________________________
+
+
+							WEBSITE ARCHITECTURE:
+						____________________________________
+
+
+(1) Create VPC :- name tag Netflix -CIDR name 10.1.0.0/16 -create. VPC ID will be create ..
+(2) Create Subnet:- name tag public-2a -Netflix VPC -us-west-2a -CIDR 10.1.0.0/16 -CIDR block 10.1.1.0/24 create. create another subnet also
+(3) Create Subnet:- name tag public-2b -Netflix VPC -us-west-2b -CIDR 10.1.0.0/16 -CIDR block 10.1.2.0/24 create.
+(4) Create Subnet:- name tag private-2a -Netflix VPC -us-west-2a -CIDR 10.1.0.0/16 -CIDR block 10.1.3.0/24 create.
+(5) Create Subnet:- name tag private-2b -Netflix VPC -us-west-2b -CIDR 10.1.0.0/16 -CIDR block 10.1.4.0/24 create. i will have access internet connection to my networks to public networks.
+(5) internet gateway:- name tag Netflix-network-ig -create -go to actions -attach to VPC -Netflix VPC connected -attached internet gateway. the resources not access. then route table is automatically create that name is internet-route-table. Create another route -table also....internet-route-table click - attach the subnets as -subnet associations -edit subnet associations -attach all public subnets -save. -edit routes -add routes -0.0.0.0/0 -internet gateway -save routes
+(6) Create route-table:- name tag non-internet-route-table -Netflix VPC -create. non-internet-route-table click - attach the subnets as -subnet associations -edit subnet associations -attach all private subnets -save. just a small change -public-2a -actions =modify auto-assign -enable click it -save. public-2b also the same. (just tack it easy to search where is my IP address c AWS provides). 
+(7) NOW CREATE INSTANCE:- proxy -t2-micro -ubuntu -networks Netflix VPC -click the select an security groups -click default -keypair -lunch instances server. And
+(8) go to security groups -now changing the default inbound rules -edit -source -my IP server save. And
+(9) then putty host name paste public IP address -ssh -auth -browse -select the ppk file click on open or keypair as well do connect putty -And chmod 500 keypair name -sudo apt-get update (web-server) sudo -apt-get install apache or apache2 -yes - and may be paste the public IP on new website now coming to the apache2 (web-server) is open now i will create the some code.
+<html>
+<body>
+<h1>WELCOME TO THE HOME PAGE!</h1>
+</body>
+</html> and refresh (apache2 website) now will be coming to the (WELCOME TO THE HOME PAGE!)
+(10) go to dashboard proxy server click it -actions -image -create images -image name -Netflix-home -create. now go to image section AMIs -Netflix-home has been created. then has pending status in multiple time refresh it's. now creates. then after 
+<html>
+<body>
+<h1> WELCOME TO THE STREAMING!</h1>
+</body>
+</html> and to go to dashboard proxy server click it -actions -image -create images -image name -Netflix-streaming -create. as per as lunch instance -my AMIs as ther eclick it -Netflix-home image -select - t2 micro -network -Netflix VPC -subnet private-2a network  -select the select an existing security group -same keypair -lunch. and name was instance name is Netflix-home. now youn looking for the public IP address because i can deploy for the private network. now go to AMIs -click the Netflix-stream -actions -lunch -t2 micro -subnet private-2b network  -select the select an existing security group -same keypair -lunch. and name was instance name is Netflix-streaming. now i have 2 servers and i will not access public IPs.this have not providing internet access. 
+i will be connecting to this home and streaming server let'c how can do connected. you can proxy public IP address copy and then next process should be as much of it. /home/ubuntu (enter)7:05 i can't understand....! ssh -i copy pem and private IP home and stream  and as same wish connect and check the status for running status.
+
+(11) load balancer: create load balancer -name Netflix-demo -internet-facing -HTTP protocol -Netflix-VPC -available zone -i have connect to 2a and 2b subnets -next -next -home-page-server -next -Netflix-home click -next -create. I can create one more target group - create -streaming-server -create. home-page server not connect to the -edit registered -Netflix-home click add registry save. and then same as streaming-server -edit -Netflix-stream click it and save. both them targets attached.
+
+load balancer -Netflix-demo click it and how to configure that uses -listener -default view/edit/rules click it .click + -insert rule -add condition -path -/watch* add action forward to request click it -streaming-server -right click assemble -save and one more  click + -insert rule -add condition -/home* -right click update.. now
+go to instance Netflix-home click -tack private IP copy-ssh -i pem ubuntu@ paste -cd /var/www/html/ -sudo mkdir home -sudo cp index.html ./home/ (go to website and home page and stream page) Netflix lo elagayeethgey movies chusetapudu streming ani and movies list chusetapudu home ani ela chupistundho dhaaney manam ekkada create cheeyadam jarigindhi....(FileZilla imp and check freenom you get free url for the projects and login and search it) 7:20
+  
+
+
+WHAT IS DIFFERENCE BETWEEN AMI AND INSTANCE : In Amazon machine image is a template or blueprint used to create a virtual server, while an "instance" is the actual server created from that AMI; essentially an AMI is the design for a server, and an instance is a live, running version of that design that you can access and use on the AWS cloud.
+
+DIFFERENCE B/T SCALABILITY AND ELASTICITY : Scalability is the ability to handle the increased load on its current hardware and software resources. Elasticity is the ability of a  system to increase the workload by increasing the hardware/software resources dynamically
+
+how to create RDS: go to instance -create database -sql - next -de-my test -MySQL version (default) -free tier click it -setting - instance identifier -web-demo -israyal -password -next -default vpc is there -vpc security groups -choose vpc security -default -database option -database name local my sql images -is name images -0days i dont want back -disable auto minor -no performance -create database - (and create elastic beanstalk -).
