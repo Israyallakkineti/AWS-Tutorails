@@ -1,0 +1,130 @@
+                                             AMAZON STORAGE SERVICES:
+		                   ________________________________________
+
+(1) Amazon Simple Storage Service (S3): An object storage service that's designed to store and retrieve any amount of data. S3 offers scalability, security, performance, and availability. It can be used for a variety of purposes, including data lakes, websites, mobile applications, and backup and restore.
+
+(2) Amazon Elastic Block Store (EBS): A storage service that helps Amazon Elastic Compute Cloud users deploy workloads of all sizes. EBS can be used for enterprise applications, relational and non-relational databases, and data analysis engines.
+
+(3) Amazon Elastic File System (EFS): A cloud file storage solution that dynamically scales as you add or remove files. EFS is a good choice for storing content management system workloads and facilitating file sharing.
+
+(4) AWS Storage Gateway: A hybrid storage service that allows your on-premises applications to use AWS cloud storage. You can use Storage Gateway for backup and archiving, disaster recovery, and more.
+
+(5) Amazon Glacier: A secure, durable, and low-cost storage class for data archiving and long-term backup. Glacier is designed to store data that is infrequently accessed, such as backups, archives, and digital media.   (Other AWS storage services include: AWS Snowball, Instance Store Volumes, and Amazon FSX for Lustre.)
+
+
+click on S3 buckets: create buckets -name and region type it -next -next -create buckets -now bucket is created. - now upload a file -now the pictures and files -next -upload -now uploaded a file the file click it and details of the url - click it URL -access is denied why because the URL public - now back and upload the same file click and permissions -edit -block all public access save it -confirm. now I will give permissions -public access -group -everyone -read object and save it. now refresh URL.
+
+
+click on (EFS): create file system click as -VPC is there but you instance VPC is same as it EFS volume -next step -create the file system -now connect the 2 instance of public IP address to connect the PUTTY. -(now the instances created by private P/IP like (ubuntu -172.32.195)) -tack 1 instance click and action -networking -change security group -assigned two VPC and sg also -both them connect security groups same as well -follow the DNS URL steps -now 2 instances sudo apt-get update and run the CMD sudo apt-get install nfs-common -mkdir nfs 1
+
+
+UBUNTU@ip-172.32.195                                         UBUNTU@ip-173.83.167
+1. sudo apt-get update					2. sudo apt-get update
+3. sudo apt-get install nfs-common 			4. sudo apt-get install nfs-common
+5. mkdir nfs-1						6. mkdir nfs-2
+7. using the NFS client (URL)nfs-1			9. using the NFS client (URL)nfs-2			
+8. cd nfs-1						10. cd nfs-2
+11. ls							11. ls -----> (now you already create the 1st instances 1 file and they created is there ekkada kuda aa file ni chuputhundhi(1.txt))
+12. sudo touch 1.txt					15. ls .....> is there 2.txt
+13 . ls							16. sudo touch 3.txt
+14. sudo touch 2.text
+17. ls ....> is there 3files is there 
+
+
+						AWS SERVICES - DATABASE :-
+					____________________________________________
+
+AMAZON RDS: Amazon relational database service (Amazon RDS)makes it easy to set up, operate and scale a relational database in the cloud. (RDS can manage amazon aurora, MariaDB, oracle and MYSQL server and SQL server) this amazon services database.
+
+AMAZON DYNAMODB: is a key-value and document database that delivers single-digit millisecond performance at any scale.
+
+AMAZON REDSHIFT; is a fast scalable data warehouse that makes it simple and cost-effective to analyse all your data across your data warehouse and data lake. (this is multiple database combined together connect one database).
+
+amazon elastiCache: can be used to seamlessly deploy, run and scale popular open source compatible in-memory data stores. (what is Cache is a layer between client and the web server from which the information is being requested.)
+
+                                               AWS SERVICES - SECURITY
+					________________________________________
+
+AMAZON IDENTITY AND ACCESS MANAGEMENT (IAM): enables you to manage access to AWS services and resources securely. (USES): Ensures that the right people and job roles in your organisation (identities)can access the tools they need to do their jobs. (OneLogin) : IAM allows companies to grant different system permissions to different identities rather than give every authorized users the same privileges.  
+
+AWS KEY MANAGEMENT SERVICES (KMS): makes it easy for you to create and manage keys and control the use across a wide range os aws services and in your applications. 
+
+
+					       AWS SERVICES - MANAGEMENT
+					_______________________________________
+
+
+
+(1) AWS CLOUDFORMATION: Provides a common language for you to describe and provision all  the infrastructure resources in your cloud environment.
+(2) AWS OPSWORKS: is a configuration management services that provides managed instances of chef and puppet. chef and puppet are automation platforms.(if you have aws password is missing the aws in 200+ project is there using the password changes that update and deploy OPSWORKS architecture).
+(3) AWS CLOUDTRAIL: Is a services that enables governance, compliance, operational auditing and risk auditing of your AWS account. with CloudTrail, you can log, continuously  monitor and retain account activity related to actions across your AWS infrastructure 
+(4) AWS CLOUDWATCH: Is a monitoring and management services built for developers, system operators, site reliability engineers (SRE) and IT managers.
+
+
+					      AWS SERVICES - CUSTOMER ENGAGEMENT
+					_______________________________________________
+
+(1) AMAZON CONNECT: Is a ready to deploy customer contract center, which can help you setup your IVR calls to agents in the shortest time possible.
+(2) AMAZON SIMPLE EMAIL SERVICES (AWS SES): Is a cloud-based email sending services designed to help digital marketers and application developers send marketers and application developers    
+end marketing, notification and transactional emails.
+
+					     AWS SERVICES - APPLICATION INTERGRATION
+					_________________________________________________
+
+(1) SIMPLE NOTIFICATION SERVICE (SNS): Is a highly available, durable, secure, fully managed pub/sub messaging service that enables you to decouple microservices, distributed systems and serverless applications.
+(2) AWS SIMPLE QUEUE SERVICE (SQS): Is a fully managed messages queuing service that enables you to decouple and scale microservices, distributed systems. and serverless application.
+
+
+					              AWS - PRICING
+						___________________________
+
+1. pay-as-you go   2. save when you server    3. pay less by using more  (EC2 -750 hours free tier and AMAZON S3- 5 GB AND AWS DYNAMODB 25 GB AND AMAZON RDS 750HOURS)...>FREE TIER.
+
+
+WHAT IS AMAZON VIRTUAL PRIVATE CLOUD (AMAZON VPC): enables you to launch AWS resources into a virtual network that you've defined. 
+HOW DOES WORK: A virtual network environment that allows you create a logically isolated, private network within the aws cloud, providing you with complete control over your network configuration, including IP address range, subnet and security groups.
+
+
+HOW TO CREATE VPC: instance - VPC - your VPC -create VPC -tag name - VPC-demo1 - CIDR -192.1.0.0/16 (range) -create VPC .
+CREATE SUBNET: tag -subnet-demo1 -VPC-demo1 -ap-south-1a -VPC CIDRrs 192.1.0.0/16 -IP 192.1.1.0/24 -create ......> VPC subnet-1 is ready.
+CREATE SUBNET 2: tag -subnet-demo2 -VPC-demo1 -ap-south-1b -VPC CIDRrs 192.1.0.0/16 -IP 192.1.2.0/24 -create .......> VPC subnet-2 is also ready( if you have create subnet automaticallu route table also created).check routes and how to talk can each other -subnet associations -edit -click it 2 subnets -save. now subnet firewalls check it.
+
+security -network AcLs -click VPC-demo1 -edit inbound rules -you looking allows status for the all trafic rules like active.
+security groups -default security groups is created by subnet and default security groups also created - edit inbound rules -all traffic -subnet eraise and -anywhere -00.00/00 port -save.
+
+
+
+   						     NAT Gateways
+						_________________________
+
+A NAT gateways in amazon web services (aws) is a Network address transalation (NAT) service that allows private subnets to access services outside the subnet while keeping them inaccessible to unsolicited traffic.
+
+how to create NAT Gateways : go to instance and search NAT Gateway -create NAT Gateway -demo-nat 1 (create) -( private )subnet name(ex;subnet1-demo1 tack it -allocate Elastic IP (click it) -create -ofter deploying NAT -route tables- demo1- private tack it or click it -routes -edit routes -add routes - i will give all the connections 0.00.0/0 and search nat click it something -save routes -if you have internet access for your terminal tack public IP/A copy and ssh paste it in your internet accessed NAT Gateway's.
+
+
+						     VPC PEERING
+						_____________________
+
+Amazon web services(AWS), *peering is a networking feature that allows two virtual private clouds (VPCs) to communicates securely and directly*. how to works ----VPC peering uses private IP addresses to route traffic between VPCs allowing resources in each VPC to interact as if they were part of the same network.
+
+How to create VPC: go to AWS dashboard -search VPC click it- and lunch instances -ubuntu server -default VPC deployed tack it -key name - create. - go to security groups and tack inbound rules and traffics - all -lunch instances.
+
+Create peering connection: name demo1 - VPC-demo1 -VPC Accepeter -default VPC tack it -create peering - click on actions -accept request - accept. active 
+add route table -subnet1-demo1 click it -routes -edit -172.31.0.0/16 and peering connection save route successfully and public IP/A kuda add chryochu.as same (VPC-demo1).(ping public IP/A ping avuthundhi and same changes for is go to VPC-demo1 inbound rules all traffic anywhere - 0 serch cheyu add cheyu. save)ping IP/a paste.(connect two peering ).
+
+
+						WHAT IS AMAZON EMR
+		        		   ____________________________
+
+Amazon EMR is a managed cluster platform that simplifies running big data frameworks, such as apache Hadoop and apache spark, on AWS to process and analyze vast amounts of data. by using these frameworks and related open-source project, such as apache hive and apache pig, you can process data for analytics purposes and business intelligence workloads.
+EMR Architecture: remains identical to the normal Hadoop cluster architecture and local files system of the nodes, HDFS or EMRFS are uses as storage modes for EMR. 
+EMR Applications : Amazon EMR supports may applications , such as hive, pig and the spark streaming library to provide capabilities such as using higher-level languages to create processing workloads, leveraging machine learning algorithms, making stream processing applications and building data warehouses, in adition, amazon EMR also supports open-source project that have their own cluster management functionality instead of using YARN.  
+
+
+						HANDS-ON HIVE WITH EMR:---
+					___________________________________________
+
+Go to dashboard - EMR search - and create a bucket here ---> create bucket -bucket name -region -create -now i create a bucket. and go to EMR -create  cluster -cluster name -default s3 bucket -(choose) cluster -application choose 1 option -hardware conf is default -security access -ec2 keypair lo yobro tack it - now another included for us advance option is only one for that - step type -Hive program -add step -name (Hive program) -script s3 location (s3://us-east-1.elasticmapreduce.samples/cloudfront/code/Hive_CloudFront.q) -inputs3 location (s3;//us-east-1.elasticmapreduce.samples) -output s3 - bucket name -arguments (This sample shows you how to analyze CloudFront logs stored in S3 using Hive) -action and failure is (continue) -add -next -next -next -security option yobro -create cluster. now the cluster is ready s3 bucket application also is ready but 10 -15 minutes time has to ready for this and go to s3 buckets and down option is there downloaded as you wish the file.
+
+
+
