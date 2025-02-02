@@ -1,0 +1,42 @@
+AWS -TERRAFORM 
+					_______________________________
+
+As search for terraform providers in new wed-site -click it first link -and MYSQL server are using create terraform it -and terraform documentation and -they will be download terraform -and Linux -copy address - (terminal putty or local instance and cli)- wget -paste -unzip paste -mv terraform /usr/local/bin -cd /usr/local/bin -ls -terraform --version maybe it is not found -mv terraform /usr/bin/ -terraform --version . --------------> iam user -create user -user name -programmatic access -create -attach existing administrative Access click it -next -and kay name add -downloaded cv .coming instance - ls -cd /opt/ -ls -mkdir terraform -ls -cd terraform -mkdir devops -cd devops -touch main.tf -vi main.tf -1 ex: -terraform init, frm, validate, paln, apply and destroye. attaching eip terraform use case. variables is there  
+
+provider "aws" {							variables are used as placeholders to customize infrastructure configurations without modifying the core code.
+
+version = " 2.8"							(Dynamic conf, environment-specific settings, modular design and improved maintainability.)
+
+access_key = "AKIAWHW5MHXXT7R57"   (Var.access_key)                                    
+
+secret_key = "4bv/REWNIW6DyD41BLMISLYVfPcycqURiJJsbIjT"		(2) Var.secret_key    
+
+region = "us-east-1"							vi input.tf 
+									Variable access_key {
+}
+								  	type = String 
+resource "aws_instance" "terraform" {				        }
+									
+ami           ="ami-Oaffd4508a5d2481b"					Variable secret_key {
+									type = string
+instance_type = "t2.micro"						}
+
+key_name      = "devops"
+
+subnet_id     ="subnet-0ddf413ac60a5ba74"				(terraform plan 
+									enter access key and secret key value )
+tags = {
+
+Name = "Terraform-instance"
+
+}
+
+}
+
+resource "aws_eip" "terraform-instance-eip" {   (attaching aws on terraform)
+
+instance aws_instance.terraform.id (or id is giving)
+
+vpc = true
+
+}
