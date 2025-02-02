@@ -1,0 +1,86 @@
+WHAT IS CLOUD COMPUTING AND SERVICES ?
+
+
+Cloud computing is the practice of using remote servers on the internet for carrying out a task, rather than using using our Own computers/servers.
+
+1. ADVANTAGES OF CLOUD COMPUTING:
+
+Little or no investment, more focus on app development and requires less workforce
+
+2. Cloud products:
+
+NETFLIX, AMAZON, PRIME VIDEOS,AIRBNB AND GOOGLE DRIVE 
+ 
+This companies how to handling for the cloud ?   EX: Netflix suffered a huge blackout on the internet where in all services were down (2008 to 2009)you know why because the more number of users came up to use the services and that's when the servers crashed right the whole application went down and it caused a huge loss to the Netflix company itself and that is when they decided i can't manage all my servers i can either do the app development or i can manage the servers there's only one thing that i can do then NETFLIX Started to migrate itself on the AWS infrastructure which is highly scalable which is highly available right and now seldom do you see that Netflix services is down in my experience I've never seen Netflix downs since been using it from past two three years I've never seen Netflix down or I've never seen an error that you know the server is out or there's problem with the infrastructure. Netflix high availability that is provided by the cloud providers these days. 
+
+CLOUD COMPUTING MODELS ?
+
+Deployment models and Service model
+
+What is deployment model is various ways using which we can deploy our application on the cloud infrastructure is called public cloud. now what is public cloud are the servers which are offered by your cloud provider. each server can have multiple companies hosting their application. Netflix and prime videos as there competitor if you have offered for public cloud your application would share same server some other application it cloud be prime video as well but, by is there a segregation although there no problem when there are multiple applications on same server but what happens is some companies are still skip some companies have data policies that they say have confidential data and we cannot take any risk some other companies also.
+
+(1) PUBLIC CLOUD: A type of computing that allows users to access and purchases computing resources over the internet from a third-party provider storage, computing power and database through a web browser. 
+(2) PRIVATE CLOUD: A cloud computing environment that's dedicated to a single organization or user. it provides the benefits of cloud computing, like scalability and flexibility, while      also offering more security and control than public cloud.
+(3) HYBRID CLOUD: A computing environment that combines a public cloud with an on premises data center. this allows data and applications to be shared b/t the two environment. 
+
+WHAT IS SERVICE MODEL: A cloud computing services model e type of service offered in the cloud, the level os management and responsibility that the customer has for it. The main cloud services models are. 
+(A) Infrastructure as a service (laas): laas refers to providing the complete access to the server's OS typically, laas provides hardware, storage, servers and data cWHAT enter space or network components; it may also include software. Ex: EC2
+(B) platform as a service (paas): In paas, one does not get access to the whole operating system. rather than access is given at a dashboard level, where a user uploads the data and the rest is taken care by the cloud provider. EX: ELASTIC BEANSTALK
+(C) software as a service (saas): saas refers to the practice of directly providing the software to the customer, without making any server of dashboard available to them. EX: FACEBOOK
+
+
+WHAT IS CLOUDE PROVIDERS : GOOGLE CLOUD, MICROSOFT AZURE CLOUD AND AMAZON WEB SERVER ---> This most popular many big and small companies are using this type of cloud providers.
+
+
+WHY AWS CHOOSE YOU : The market owns the 35% market shares and 100 companies are using this since 2006, now 18years are there and AZURE also 23% and google cloud 10% in market shares.
+ALIBABA CLOUD AND TENCENT CLOUD ARE THERE. Some other services provides include :IBM Cloud, Oracle cloud infrastructure, Huawei cloud, VMware Cloud on AWS and Digital Ocean App platform.
+
+
+WHAT IS AMAZON EC2 :- 
+
+AMAZON ELASTC IS COMPUTE CLOUD (EC2): A web service provides scalable computing capacity in the Amazon web services (AWS) cloud. EC2 is designed to make web-scale cloud computing easier for developers. A wed service that provides secure, resizable compute capacity in the cloud.
+
+WHAT IS EC2 USER NAME ?
+
+For amazon Ec2 Linux instances. the default user name is ec2-user the public key is stored on the target instance (the instance that the user is requesting access to) in the ec2-user home directory (-ec2-user/.ssh/authorized_keys).
+
+WHAT IS TYPE OF EC2 IN AWS ?
+
+(1) General purpose : A balance of compute, memory and networking resources, suitable for applications like web servers and code repositories.
+(2) Compute Optimized : Designed for compute-intensive applications, such as application servers and gaming servers.
+(3) Memory Optimized : Designed for workloads that process large data sets in memory. such as preloading large datasets before running an app.
+(4) Storage Optimized : Designed for workloads that require high, sequential read and write access to very large data sets on local storage.
+(5) Accelerated Computing : Uses hardware accelerators to perform functions more efficiently than software running on CPUs, such as graphics processing and pattern matching.
+(6) High-performance Computing : Optimized for running HPC applications at scale, such as deep learning workloads, complex simulations and weather forecasting.
+(7) Previous Generation : Users who have Optimized there applications around previous generation instances types and have yet to upgrade.
+
+WHAT IS ELASTIC BEANSTALK: You can quickly deploy and manage applications in the AWS cloud without having to learn about the infrastructure that runs those applications. The service for deploying and scaling web applications and services. upload your code and elastic beanstalk automatically handles the deployment from capacity provisioning, load balancing, and autoscaling to application health monitoring.
+
+WHAT IS AWS LAMBDA: AWS LAMBDA is a compute service that lets you run code without provisioning or managing servers. lambda again is an automated version of ec2 it's an advanced version of ec2.
+
+WHAT IS LOAD BALANCER: ELASTIC LOAD BALANCING is distributes incoming application or networking traffic across multiple targets, such as amazon ec2 instances, containers and ip addresses, in multiple availability zones, and monitors health.
+
+WHAT IS AWS AUTO SCALLING: AWS AUTO SCALLING monitors your applications and automatically adjusts capacity to maintain steady, predictable performance at the lowest possible cost.
+
+WHAT IS AWS AUTO SCALLING GRUOP: Contains a collection of ec2 instances that are treated as a logical grouping for the purposes of automatic scaling and management. an auto scaling group also lets you use amazon ec2 autoscaling feature such as health check replacements and scaling policies. 
+
+WHAT IS ECR: ELASTIC CONTAINER REGISTRY (ECR) is a fully-managed docker container registry that makes it easy for developers to store, manage and deploy docker contains images. 
+  
+WHAT IS ECS: ELASTIC CONTAINER SERVICE (ECS) is a highly scalable, high-performance container orchestration service that supports docker containers and allows you to easily run and scale containerized application on AWS.
+
+
+				Install process putty:-
+
+launch instance- Ubuntu Server- key pair- create new -add .ppk Putty- create key pair -launch instances- go to networks- tack public IP address copy.
+HOW TO CONNECT PUTTY : Now install the putty - go to new website - download the putty in windows 64 bits- 64-bit x86 download- next -next -installing done. and finish. the putty gen 64- x86 also down -click SSH-i -generate from installation purpose.- then now putty configuration - paste p/IP -SSH -auth-credential -browser and -putty keypair add -open it. open the putty now type ubuntu it.
+
+EX:-- now the putty gen click it -load select the keypair name - and save private key - then paste public key - SSH -auth -browser- add create the key pair -click it yes- open the putty now type ubuntu login it.             (how to connect the windows on instance ?)
+
+
+ELASTIC BEANSTACK: go to resource groups -GET started -create a web app (host)application name -choose platform PHP or python, java and docker application code simple click it and create application it. you will not access operate systems (OS), you only operate dashboard.
+
+
+LAMBDA: Create function -browser serverless click it. now all resources what did do it just check out.
+
+
+
