@@ -72,9 +72,9 @@ WHAT IS ECS: ELASTIC CONTAINER SERVICE (ECS) is a highly scalable, high-performa
 				Install process putty:-
 
 launch instance- Ubuntu Server- key pair- create new -add .ppk Putty- create key pair -launch instances- go to networks- tack public IP address copy.
-HOW TO CONNECT PUTTY : Now install the putty - go to new website - download the putty in windows 64 bits- 64-bit x86 download- next -next -installing done. and finish. the putty gen 64- x86 also down -click SSH-i -generate from installation purpose.- then now putty configuration - paste p/IP -SSH -auth-credential -browser and -putty keypair add -open it. open the putty now type ubuntu it.
+HOW TO CONNECT PUTTY : Now install the putty - go to new website - download the putty in windows 64 bits- 64-bit x86 download- next -next -installing done. and finish. the putty gen 64- x86 also down -click SSH-i -generate from installation purpose.- then now putty configuration - paste pu/IP -SSH -auth-credential -browser and -putty keypair add -open it. open the putty now type ubuntu it.
 
-EX:-- now the putty gen click it -load select the keypair name - and save private key - then paste public key - SSH -auth -browser- add create the key pair -click it yes- open the putty now type ubuntu login it.             (how to connect the windows on instance ?)
+EX:-- now the putty gen click it -load select the keypair name - and save private key give the any name it aws pem file merge ppk file as on -next paste public key - SSH -auth -browser- add create the key pair -click it yes- open the putty now type ubuntu login it.             (how to connect the windows on instance ?)
 
 
 ELASTIC BEANSTACK: go to resource groups -GET started -create a web app (host)application name -choose platform PHP or python, java and docker application code simple click it and create application it. you will not access operate systems (OS), you only operate dashboard.
